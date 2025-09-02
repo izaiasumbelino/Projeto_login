@@ -1,83 +1,121 @@
 * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
 
-        body {
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+.btn-voltar {
+    position: fixed;      /* Fixa na tela */
+    top: 10px;            /* Distância do topo */
+    left: 10px;           /* Distância da esquerda */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;        /* Fica acima de outros elementos */
+    transition: background-color 0.3s;
+}
 
-        .box {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 600px;
-        }
+.btn-voltar:hover {
+    background-color: #0056b3;
+}
 
-        fieldset {
-            border: none;
-        }
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar */
+}
 
-        legend {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #333;
-        }
 
-        .inputBox {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
+.btn-voltar:hover {
+    background-color: #0056b3;
+}
 
-        .inputBox label {
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
+body {
+    background-image: url(andreas-slotosch-w-BSFRpfTWk-unsplash.jpg);
+    background-size: cover; /*para cobrir toda a tela*/
+    background-position: center; /*para centralizar a imagem*/
+    min-height: 100vh; /*para cobrir toda a tela*/
+    display: flex; /*flexbox*/
+    justify-content: center; /*para centralizar*/
+    align-items: center; /*para centralizar*/
+}
 
-        .inputBox input,
-        .inputBox select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
+.box {
+    
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    width: 420px;
+    background: transparent; /*para deixar transparente*/
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px); /*para deixar transparente*/
+    border-radius: 10px;
+    padding: 30px 40px;/*para dar espaço*/
+}
 
-        .inputBox input:focus,
-        .inputBox select:focus {
-            border-color: #007bff;
-            outline: none;
-        }
+fieldset {
+    border: none;
+}
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+.inputBox { 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+}
 
-        @media (max-width: 500px) {
-            .box {
-                padding: 20px;
-            }
-        }    
+.inputBox label { /*  */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+    
+}
+
+.inputBox input,
+.inputBox select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.inputBox input:focus,
+.inputBox select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    .box {
+        padding: 20px;
+    }
+}
